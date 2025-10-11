@@ -25,3 +25,7 @@ _Note: In Pre-Development Phase, I only included the basic three stages as havin
 - Pricing + Features
 - CTA (Call-to-Action)
 - Footer
+
+## Designing
+
+I have obtained a design from different websites inspiration like Awwwards. You also have a look to it.
