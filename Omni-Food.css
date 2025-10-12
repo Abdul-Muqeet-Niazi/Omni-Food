@@ -1,0 +1,48 @@
+/* NOTE: Always make design system at the top of your css file to make it easy for you to choose 
+          style decisions, spacing analyzing and color reusability etc, whenever you need to it.        */
+
+/* 
+
+--- 01 TYPOGRAPHY SYSTEM
+
+FONT SIZE SYSTEM (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+FONT WEIGHTS:
+
+LINE HEIGHTS:
+-Default: 01
+
+--- 02 COLORS FOR THE WEB
+
+-Main/Primary: #e67e22
+-Tints:
+-Shades:
+-Accents
+-Grey Color: #555 (Basically used for fonts to relieve eyes while reading).
+
+--- 03 SHADOWS
+
+--- 04 BORDER-RADIUS
+
+--- 05 WHITESPACE
+
+SPACING SYSTEM (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* For choosing the best typography for your website according to its personality, its better to write 
+some code before it, and give it as sans-serif for some time, or set it as default version. */
+body {
+  font-family: sans-serif;
+  color: #555;
+  line-height: 1;
+  font-weight: 400;
+}
