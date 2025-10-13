@@ -38,6 +38,11 @@ SPACING SYSTEM (px):
   box-sizing: border-box;
 }
 
+/* Explained in "How rem works! */
+html {
+  font-size: 62.5%;
+}
+
 /* For choosing the best typography for your website according to its personality, its better to write 
 some code before it, and give it as sans-serif for some time, or set it as default version. */
 body {
@@ -45,4 +50,15 @@ body {
   color: #555;
   line-height: 1;
   font-weight: 400;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+  width: 100%;
 }
