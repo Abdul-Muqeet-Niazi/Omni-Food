@@ -19,7 +19,7 @@ LINE HEIGHTS:
 -Tints:
 -Shades:
 -Accents
--Grey Color: #555 (Basically used for fonts to relieve eyes while reading).
+-Grey Color: #555,#333 (Basically used for fonts to relieve eyes while reading).
 
 --- 03 SHADOWS
 
@@ -57,8 +57,64 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .hero-img {
   width: 100%;
+}
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -1px; /* Here we use px because it is a tiny difference and it does not affect on font-size */
+  margin-bottom: 3.2rem;
+}
+
+.hero-description {
+  font-size: 2.4rem;
+  line-height: 24px;
+  margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+  font-size: 1.8rem;
+  text-decoration: none;
+
+  display: inline-block;
+  padding: 1.6rem 3.2rem;
+  border-radius: 2rem;
+}
+
+.btn--primary:hover,
+.btn--primary:visited {
+  background-color: #e98b38;
+}
+
+.btn--primary {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.btn--secondary {
+  background-color: #fdf2e9;
+  color: #333;
+}
+
+.btn--secondary:hover,
+.btn--secondary:hover {
+  /* This border makes an effect of glitch in our heading-primary and hero-description ↓ */
+  /* border: 1px solid #333; */
+
+  /* In order to avoid glitch, below we use the trick of box shadow which will create exact same border
+  but inside of an element. */
+  /* Trick to add border inside of an element */
+  box-shadow: 0 0 0 1px #333;
+}
+
+.btn--margin-right {
+  margin-right: 1.2rem;
 }
