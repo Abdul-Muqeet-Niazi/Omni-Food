@@ -46,7 +46,7 @@ html {
 /* For choosing the best typography for your website according to its personality, its better to write 
 some code before it, and give it as sans-serif for some time, or set it as default version. */
 body {
-  font-family: sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #555;
   line-height: 1;
   font-weight: 400;
@@ -89,6 +89,7 @@ body {
 .btn:visited {
   font-size: 1.8rem;
   text-decoration: none;
+  font-weight: 600;
 
   display: inline-block;
   padding: 1.6rem 3.2rem;
@@ -135,4 +136,17 @@ body {
 /* So for making ".btn" class reusablitity, we make another class for that. */
 .btn--margin-right {
   margin-right: 1.6rem;
+}
+
+.delivered-meals {
+  display: flex;
+}
+
+.delivered-imgs img {
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+}
+
+.delivered-text {
 }
