@@ -166,3 +166,7 @@ body {
 .delivered-text span {
   color: #cf711f;
 }
+
+.logo {
+  height: 2.2rem;
+}
