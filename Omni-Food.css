@@ -9,6 +9,10 @@ FONT SIZE SYSTEM (px):
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
 FONT WEIGHTS:
+-Defualt: 400
+-Medium: 500
+-Semi-Bold: 600
+-Bold: 700
 
 LINE HEIGHTS:
 -Default: 01
@@ -24,6 +28,7 @@ LINE HEIGHTS:
 --- 03 SHADOWS
 
 --- 04 BORDER-RADIUS
+-Default: 2rem
 
 --- 05 WHITESPACE
 
@@ -73,7 +78,7 @@ body {
 
   display: inline-block;
   padding: 1.6rem 3.2rem;
-  border-radius: 2rem;
+  border-radius: 20px; /* We dont want to scale that up!, so we fix this value as in pixels. */
 
   /* The transition property allows us to transition(fade from one to another) between two elements using an animation */
   /* Remember: Always use transition property on original(parent) element. */
@@ -95,12 +100,12 @@ body {
 }
 
 .btn--primary:hover,
-.btn--primary:visited {
+.btn--primary:active {
   background-color: #e98b38;
 }
 
 .btn--secondary:hover,
-.btn--secondary:hover {
+.btn--secondary:active {
   /* This border makes an effect of glitch in our heading-primary and hero-description ↓ */
   /* border: 1px solid #333; */
 
@@ -138,6 +143,50 @@ body {
 
 .logo {
   height: 2.2rem;
+}
+
+/**********************************************************************************/
+/* NAVIGATION */
+/**********************************************************************************/
+
+.main-nav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+
+/* We do that, beacuse we want to increase specificity to implement color property and much more!, as
+we have above color property etc as well, so it does not implement this below property due to 
+its low specificity, that's why! */
+/* Note: if you maintain space between them then it will become descendent operator */
+.main-nav-link.nav-CTA {
+  color: #fff;
+  background-color: #e67e22;
+
+  padding: 1.2rem 2.4rem;
+  border-radius: 20px; /* Here we again dont want to scale that up, so we fix this value as in pixels. */
+}
+
+.main-nav-link.nav-CTA:hover,
+.main-nav-link.nav-CTA:active {
+  background-color: #e98b38;
 }
 
 /**********************************************************************************/
