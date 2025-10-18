@@ -16,6 +16,8 @@ FONT WEIGHTS:
 
 LINE HEIGHTS:
 -Default: 01
+-Small: 1.05
+-Medium: 1.5
 
 --- 02 COLORS FOR THE WEB
 
@@ -28,7 +30,7 @@ LINE HEIGHTS:
 --- 03 SHADOWS
 
 --- 04 BORDER-RADIUS
--Default: 2rem
+-Default: 20px
 
 --- 05 WHITESPACE
 
@@ -60,6 +62,36 @@ body {
 /**********************************************************************************/
 /* GENERAL REUSABLE COMPONENTS */
 /**********************************************************************************/
+
+.section-how {
+  background-color: #fdf2e9;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2.2rem;
+
+  font-size: 1.8rem;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--col-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container div {
+  padding: 8rem;
+  background-color: bisque;
+}
 
 .heading-primary {
   font-size: 5.2rem;
