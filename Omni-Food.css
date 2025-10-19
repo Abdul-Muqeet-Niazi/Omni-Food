@@ -17,7 +17,13 @@ FONT WEIGHTS:
 LINE HEIGHTS:
 -Default: 01
 -Small: 1.05
+-Mid Medium: 1.1
 -Medium: 1.5
+-Paragraph Default: 1.6
+
+LETTER SPACING
+-(-1px)
+-0.75px
 
 --- 02 COLORS FOR THE WEB
 
@@ -63,10 +69,6 @@ body {
 /* GENERAL REUSABLE COMPONENTS */
 /**********************************************************************************/
 
-.section-how {
-  background-color: #fdf2e9;
-}
-
 .container {
   max-width: 120rem;
   margin: 0 auto;
@@ -88,18 +90,33 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.container div {
-  padding: 8rem;
-  background-color: bisque;
+.heading-primary,
+.heading-secondary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -1px; /* Here we use px because it is a tiny difference and it does not affect on font-size */
 }
 
 .heading-primary {
   font-size: 5.2rem;
-  font-weight: 700;
   line-height: 1.05;
-  color: #333;
-  letter-spacing: -1px; /* Here we use px because it is a tiny difference and it does not affect on font-size */
   margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.1;
+  margin-bottom: 9.6rem;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+  display: block;
 }
 
 .btn:link,
@@ -280,4 +297,19 @@ its low specificity, that's why! */
 
 .delivered-text span {
   color: #cf711f;
+}
+
+/**********************************************************************************/
+/* HOW IT WORKS SECTION */
+/**********************************************************************************/
+
+.section-how {
+  padding: 9.6rem 0;
+}
+
+.step-text-box {
+}
+
+.step-img {
+  width: 50%;
 }
