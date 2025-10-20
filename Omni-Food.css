@@ -79,7 +79,12 @@ body {
 
 .grid {
   display: grid;
-  gap: 9.6rem;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+
+.grid--center-vertically {
+  align-items: center;
 }
 
 .grid--col-2 {
@@ -91,7 +96,8 @@ body {
 }
 
 .heading-primary,
-.heading-secondary {
+.heading-secondary,
+.heading-tertiary {
   color: #333;
   font-weight: 700;
   letter-spacing: -1px; /* Here we use px because it is a tiny difference and it does not affect on font-size */
@@ -107,6 +113,12 @@ body {
   font-size: 4.4rem;
   line-height: 1.1;
   margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+  font-size: 3.6rem;
+  line-height: 1.1;
+  margin-bottom: 3.2rem;
 }
 
 .subheading {
@@ -310,6 +322,33 @@ its low specificity, that's why! */
 .step-text-box {
 }
 
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: #bbb;
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Always use pseudo elments of "before/after" for making visual diagram and styles (like Circle), 
+this will make HTML file as clean and simple. */
+/* ↓ Adding circle visual diagram of style for making website as professional as calm personality. */
+.step-img-box:before {
+  content: "";
+  background-color: #fdf2e9;
+  width: 60%;
+}
+
 .step-img {
-  width: 50%;
+  width: 35%;
 }
