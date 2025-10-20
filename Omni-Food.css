@@ -338,15 +338,53 @@ its low specificity, that's why! */
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* Always use pseudo elments of "before/after" for making visual diagram and styles (like Circle), 
-this will make HTML file as clean and simple. */
+this will make HTML file as clean and simple.
+Remember: you can always use one-time "before and after" pseudo classes on an element. */
 /* ↓ Adding circle visual diagram of style for making website as professional as calm personality. */
-.step-img-box:before {
+.step-img-box::before,
+.step-img-box::after {
   content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
   background-color: #fdf2e9;
-  width: 60%;
+  width: 70%;
+
+  /* Now, height doesn't work in that type of situations. so there is handy trick which is 
+  padding-bottom which will create an effect in same way. */
+  /* height: 60%; */
+  padding-bottom: 70%;
+
+  /* Here, we use a new property called "z-index" which gives us, a result of positioning an element.
+  If you give +ve value, which places itself upto a position of top on every other element. if -ve 
+  then it places itself as below of other elements. */
+  z-index: -2;
+  /* Un-comment it, to analyze the effect. */
+}
+
+.step-img-box::after {
+  background-color: #fae5d3;
+  width: 55%;
+
+  /* Now, height doesn't work in that type of situations. so there is handy trick which is 
+  padding-bottom which will create an effect in same way. */
+  /* height: 60%; */
+  padding-bottom: 55%;
+
+  /* Here, we use a new property called "z-index" which gives us, a result of positioning an element.
+  If you give +ve value, which places itself upto a position of top on every other element. if -ve 
+  then it places itself as below of other elements. */
+  z-index: -1;
+  /* Un-comment it, to analyze the effect. */
 }
 
 .step-img {
