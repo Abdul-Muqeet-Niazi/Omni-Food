@@ -31,7 +31,7 @@ LETTER SPACING
 -Tints: #fdf2e9
 -Shades:
 -Accents
--Grey Color: #555,#333 (Basically used for fonts to relieve eyes while reading).
+-Grey Color: #888, #555,#333 (Basically used for fonts to relieve eyes while reading).
 
 --- 03 SHADOWS
 
@@ -311,6 +311,50 @@ its low specificity, that's why! */
   color: #cf711f;
 }
 
+/**********************************************************************************/
+/* FEATURED-IN SECTION */
+/**********************************************************************************/
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #888;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+
+  /* The "filter" CSS property applies graphical effects like blur or color shift to
+  an element. Filters are commonly used to adjust the rendering of images, backgrounds, 
+  and borders. Several functions, such as blur() and contrast() , are available to help 
+  you achieve predefined effects */
+
+  /* GRAYSCALE: Specifies the grayscale as a number or percent. 100% (1) will make the element completely 
+  grayscale-(give shade of black). 0% (0) represents the original image (no effect). */
+
+  /* filter: grayscale(1); */
+
+  /* But we don't use grayscale beacuse it effects more black on images where its orignal color is 
+  also black like In featured images; black having more black; uncomment it the above filter property
+  to see the effect. This effect also makes a user too much attention. */
+
+  /* Now we use "Brightness" instead of "grayscale", and also give some low opacity to make it perfect.*/
+
+  filter: brightness(0%);
+  opacity: 0.6;
+}
 /**********************************************************************************/
 /* HOW IT WORKS SECTION */
 /**********************************************************************************/
