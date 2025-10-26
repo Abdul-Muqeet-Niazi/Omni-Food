@@ -184,6 +184,10 @@ body {
   margin-right: 1.6rem;
 }
 
+strong {
+  font-weight: 500;
+}
+
 /**********************************************************************************/
 /* HEADER */
 /**********************************************************************************/
@@ -363,9 +367,6 @@ its low specificity, that's why! */
   padding: 9.6rem 0;
 }
 
-.step-text-box {
-}
-
 .step-number {
   font-size: 8.6rem;
   font-weight: 600;
@@ -433,4 +434,86 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
 
 .step-img {
   width: 35%;
+}
+
+/**********************************************************************************/
+/* MEAL SECTION */
+/**********************************************************************************/
+
+.section-meal {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+
+  /* When overflow: hidden is added to the container element, it hides its children that don’t fit 
+  in the container, like in this example; without overflow property, the Image will show above on 
+  border radius which will hide the card radius. */
+  overflow: hidden;
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  color: #333;
+  text-transform: uppercase;
+  border-radius: 100px;
+
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+
+.tag--vegan {
+  background-color: #94d82d;
+}
+
+.tag--paleo {
+  background-color: #ffd43b;
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
 }
