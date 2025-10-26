@@ -178,10 +178,33 @@ body {
   /* So outline will pally inside of the element box! */
 }
 
+.link:link,
+.link:visited {
+  display: inline-block;
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  /* currentColor: Apply the current color which had applied on the element. Ex: #e67e22 */
+  padding-bottom: 3px;
+}
+
+.link:hover,
+.link:active {
+  color: #e98b38;
+}
+
 /* you should ask from me that, Why do not I put margin right on ".btn" class because if we use that class property on another button, then there it will also add margin right! */
 /* So for making ".btn" class reusablitity, we make another class for that. */
 .btn--margin-right {
   margin-right: 1.6rem;
+}
+
+.link--margin-bottom {
+  margin-bottom: 4.8rem;
+}
+
+.center-text {
+  text-align: center;
 }
 
 strong {
@@ -452,6 +475,12 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
   in the container, like in this example; without overflow property, the Image will show above on 
   border radius which will hide the card radius. */
   overflow: hidden;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .meal-content {
@@ -517,3 +546,57 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
   width: 2.4rem;
   color: #e67e22;
 }
+
+.meal-lists {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.meal-list {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-list-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.all-recipes-link-style:link,
+.all-recipes-link-style:visited {
+  color: #e67e22;
+  position: relative;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* Creating "The Passing Underline Link Hover Effect"  */
+.all-recipes-link-style::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: #e67e22;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.all-recipes-link-style:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+/* **************************************************** */
