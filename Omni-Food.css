@@ -660,3 +660,50 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
 .gallery-item img:hover {
   transform: scale(1.1);
 }
+
+/**********************************************************************************/
+/* PRICING SECTION */
+/**********************************************************************************/
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #cf711f;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 7.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.8rem;
+  color: #6f6f6f;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+
+.price-btn {
+  text-align: center;
+  margin-top: 4.8rem;
+}
