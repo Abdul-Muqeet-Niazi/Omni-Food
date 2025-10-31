@@ -82,6 +82,21 @@ body {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+/* The ↓ below property is same as the ↑ above one (.grid:last-child); It's a more handy trick, 
+which means: give margin-bottom to all the grid-elements except the last child. 
+Basically this handy property reduce the number of code lines like; 
+1. first we give margin-bottom property in the grid class.
+2. then, we give another grid-class pseudo-property of last-child to give margin-property value = 0.*/
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--center-vertically {
@@ -94,6 +109,10 @@ body {
 
 .grid--col-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--col-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .heading-primary,
@@ -194,14 +213,18 @@ body {
   color: #e98b38;
 }
 
+/**********************************************************************************/
+/* HELPER CLASSES */
+/**********************************************************************************/
+
 /* you should ask from me that, Why do not I put margin right on ".btn" class because if we use that class property on another button, then there it will also add margin right! */
 /* So for making ".btn" class reusablitity, we make another class for that. */
 .btn--margin-right {
-  margin-right: 1.6rem;
+  margin-right: 1.6rem !important;
 }
 
 .link--margin-bottom {
-  margin-bottom: 4.8rem;
+  margin-bottom: 4.8rem !important;
 }
 
 .center-text {
@@ -743,4 +766,32 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
 .price-btn {
   text-align: center;
   margin-top: 4.8rem;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.feature-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  color: #e67e22;
+  background-color: #fdf2e9;
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.feature-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
 }
