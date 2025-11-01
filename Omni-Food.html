@@ -600,7 +600,7 @@
 
               <div>
                 <label for="select-where">Where did you hear from us?</label>
-                <select id="select-where">
+                <select id="select-where" required>
                   <option value="">Please choose the options</option>
                   <option value="Family/Friends">Family and Friends</option>
                   <option value="YouTube">YouTube</option>
@@ -609,7 +609,11 @@
                 </select>
               </div>
 
-              <button class="btn">Sign Up Now</button>
+              <!-- The class btn-property style value is not being applied because we give style to btn:link 
+              which means the style is only applied on anchor-links because we make button only here. 
+              As in above code I make anchor links. (That's why), Now we also style "btn" in reusabilty section
+              If in case we need for other buttons.-->
+              <button class="btn btn--form">Sign Up Now</button>
             </form>
           </div>
 

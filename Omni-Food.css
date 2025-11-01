@@ -152,6 +152,7 @@ Basically this handy property reduce the number of code lines like;
   display: block;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   font-size: 1.8rem;
@@ -167,6 +168,11 @@ Basically this handy property reduce the number of code lines like;
   transition: all 0.3s; /* Commonly use 0.3s in transition property! */
   /* "all": set all the properties that are linked with button like background-color, border etc*/
   /* You can also specify only one part to animate. Example: transition: background-color 1s; */
+
+  /* ------------ For btn ------------ */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--primary:link,
@@ -212,6 +218,11 @@ Basically this handy property reduce the number of code lines like;
 .link:hover,
 .link:active {
   color: #e98b38;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(220, 125, 34, 0.5);
 }
 
 /**********************************************************************************/
@@ -816,7 +827,7 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
   overflow: hidden;
 
   /* temporary-property */
-  height: 50rem;
+  height: 60rem;
 }
 
 .cta-image {
@@ -856,8 +867,51 @@ element of cta which is heading-scondary class property.  */
 }
 
 .cta-form {
+  color: #45260a;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  background-color: #fdf2e9;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cta-form::placeholder {
+  color: #aaa;
+}
+
+.btn--form {
+  color: #fdf2e9;
+  background-color: #45260a;
+  align-self: end;
+  padding: 1.4rem;
+}
+
+.btn--form:hover {
+  color: #45260a;
+  background-color: #fdf2e9;
+}
+
+.cta-form *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
