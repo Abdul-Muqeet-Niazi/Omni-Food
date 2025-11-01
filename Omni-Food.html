@@ -526,7 +526,7 @@
         </p>
       </div>
 
-      <!-- SECTION FEATURE -->
+      <!-- FEATURE -->
       <div class="container grid grid--col-4">
         <div class="feature">
           <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
@@ -562,6 +562,71 @@
         </div>
       </div>
     </section>
+
+    <!-- SECTION CTA -->
+    <div class="section-cta">
+      <div class="container">
+        <div class="cta">
+          <div class="cta-text-box">
+            <h2 class="heading-secondary">
+              Get your first free meal for free!
+            </h2>
+            <p class="cta-text">
+              Healthy, tasty and hassle-free meals are waiting for you. Start
+              eating well today. You can cancel or pause anytime. And the first
+              meal is on us!
+            </p>
+
+            <form action="#" class="cta-form">
+              <div>
+                <label for="User-Name">Full Name</label>
+                <input
+                  type="text"
+                  id="User-Name"
+                  placeholder="John Smith"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="User-Email">Email Address</label>
+                <input
+                  type="email"
+                  id="User-Email"
+                  placeholder="me@example.com"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="select-where">Where did you hear from us?</label>
+                <select id="select-where">
+                  <option value="">Please choose the options</option>
+                  <option value="Family/Friends">Family and Friends</option>
+                  <option value="YouTube">YouTube</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <button class="btn">Sign Up Now</button>
+            </form>
+          </div>
+
+          <!-- role & aria-label: As this tag is a container-tag element, but plays role as image-tag element,
+          if I apply img-tag element "<img>" then it create an image in grid, so one will be container
+          and other will be an image which is totally wrong in design concept.
+          As per to design concept, we have to make two-grid of container and break into 2 & inside of 
+          this container we make a form in first one and in other-one we insert an image.
+          So, we insert "role" attribute in div-tag element and instead of "alt" we insert "aria-label".-->
+          <div
+            class="cta-image"
+            role="img"
+            aria-label="Woman Eating Food"
+          ></div>
+        </div>
+      </div>
+    </div>
 
     <!-- IONICONS Script -->
     <script

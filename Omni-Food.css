@@ -35,6 +35,7 @@ LETTER SPACING
               #6f6f6f (Lightest grey-color allowed on #fdf2e9).
 
 --- 03 SHADOWS
+-0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 --- 04 BORDER-RADIUS
 -Default: 20px
@@ -774,6 +775,8 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
   text-align: center;
 }
 
+/* FEATURE */
+
 .feature-icon {
   height: 3.2rem;
   width: 3.2rem;
@@ -794,4 +797,67 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
 .feature-text {
   font-size: 1.8rem;
   line-height: 1.8;
+}
+
+/**********************************************************************************/
+/* CTA SECTION */
+/**********************************************************************************/
+
+.section-cta {
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #e67e22;
+  border-radius: 11px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+
+  /* temporary-property */
+  height: 50rem;
+}
+
+.cta-image {
+  background-image: linear-gradient(
+      45deg,
+      rgba(235, 151, 78, 0.5),
+      rgba(230, 125, 34, 0.5)
+    ),
+    url(./Images/eating.jpg);
+  background-size: cover;
+
+  /* background-position: This property is also a handy property, it helps us when we shrink our website
+  so the picture on the container/web-page is in center.  OR  The background-position property in CSS 
+  allows you to move a background image (or gradient) around within its container.*/
+  background-position: center;
+}
+
+.cta-text-box {
+  color: #2e1907;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* In below scenario, these property is applied only on heading-secondary(update the property) not on cta-class
+property, if you have to, then you have to add comma"," in between, this scenrio means add property to child 
+element of cta which is heading-scondary class property.  */
+.cta .heading-secondary {
+  color: #2e1907;
+  margin-bottom: 3.2rem;
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
 }
