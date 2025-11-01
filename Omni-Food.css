@@ -825,9 +825,6 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
   border-radius: 11px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   overflow: hidden;
-
-  /* temporary-property */
-  height: 60rem;
 }
 
 .cta-image {
