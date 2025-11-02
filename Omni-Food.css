@@ -116,6 +116,10 @@ Basically this handy property reduce the number of code lines like;
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--col-5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -815,7 +819,7 @@ Remember: you can always use one-time "before and after" pseudo classes on an el
 /**********************************************************************************/
 
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 9.6rem 0 12.8rem 0;
 }
 
 .cta {
@@ -911,4 +915,89 @@ element of cta which is heading-scondary class property.  */
 .cta-form *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+.cta-form option {
+  color: #45260a;
+  background-color: #fdf2e9;
+  font-family: inherit;
+}
+
+/**********************************************************************************/
+/* FOOTER SECTION */
+/**********************************************************************************/
+
+.section-footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  height: 2.2rem;
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #555;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: #767676;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.contacts {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address {
+  margin-bottom: 2.4rem;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.6rem;
+  color: #767676;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555;
 }
