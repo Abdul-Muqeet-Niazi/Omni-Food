@@ -1,0 +1,104 @@
+/* rem and em: In CSS, the rem unit is only relative to the document's root element, while the em unit is only 
+relative to the immediate parent of the targeted element. This means that em sizes are inherited from parent 
+elements, while rem sizes are inherited only from the root element. Ex of rem: In Omni-food.css file, rem is
+depend on html font-size.*/
+
+/* rem and em do not depend on html font-size in media queries! and we will always use "em" in media queries tag!
+becuase rem has apparently some bugs in the browsers when use in media queries.  */
+/* Instead, 1rem = 1em = 16px, sometimes rem & em is not equally to 16 but 12. if 12 is not the value then you
+have to search by playing around the numbers with the help of browser developer tool.  */
+
+/* Pros Point: Always responsive your website according to elements breaking. Avoid making responsiveness
+according to every mobile phones, tablets and screens etc. 
+Also try to avoid too much responsiveness, because not every element be fixed that's a normal thing so 
+don't overstress it. Ex: you have made 20 responsive query in a single file, which is basically a bad practice.*/
+
+/**********************************************************************************/
+/* BELOW 1050px (SMALLER DESKTOPS) */
+/**********************************************************************************/
+
+/* 1050/12 =  87.5, round-up to = 88em */
+@media (max-width: 88em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.6rem;
+  }
+
+  .testimonials-container {
+    padding: 4.8rem;
+  }
+
+  .testimonial-img {
+    width: 6.4rem;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+  }
+
+  .testimonial-text {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 1.6rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 1.2rem;
+  }
+}
+
+/**********************************************************************************/
+/* BELOW 925px (LANDSCAPE TABLET) */
+/**********************************************************************************/
+
+/* 925/12 = 77.08, round-up to = 78em */
+@media (max-width: 78em) {
+  /* By this html trick comes into handy to decrease all font-size of a page at once
+  otherwise we have to manually decrease the font-size of every element, If & only If
+  we use pixels, That's why we use rem instead of px! in Omni-food.css file. */
+  html {
+    /* Here we know the power of rem! */
+    /* Decreasing the font-size from 10px to 9px, so 1rem = 9px. */
+    /* 9px / 16px = 0.5625 * 100 = 56.25% */
+    font-size: 56.25%;
+  }
+  /* Note: This trick does not apply on Images because it is defined by percentages. */
+}
+
+/**********************************************************************************/
+/* BELOW 840px (ALSO LANDSCAPE TABLET) */
+/**********************************************************************************/
+
+/* 840/12 = 70em */
+@media (max-width: 70em) {
+  .hero {
+    max-width: 115rem;
+    gap: 8rem;
+  }
+
+  .heading-primary {
+    font-size: 4rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+  }
+
+  .hero-img {
+    width: 90%;
+  }
+}
+
+/**********************************************************************************/
+/* BELOW 770px (TABLET) */
+/**********************************************************************************/
+
+/* FONT SIZE SYSTEM (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* SPACING SYSTEM (px):
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
