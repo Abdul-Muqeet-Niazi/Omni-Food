@@ -55,7 +55,11 @@ SPACING SYSTEM (px):
 
 /* Explained in "How rem works! */
 html {
+  /* We made 1rem = 10px for our easiness! */
+  /* 10px / 16px = 0.625 = 62.5% */
   font-size: 62.5%;
+  /* Check out the Responsiveness file to understand this property. */
+  overflow-x: hidden;
 }
 
 /* For choosing the best typography for your website according to its personality, its better to write 
@@ -65,6 +69,8 @@ body {
   color: #555;
   line-height: 1;
   font-weight: 400;
+  /* Check out the Responsiveness file to understand this property. */
+  overflow-x: hidden;
 }
 
 /**********************************************************************************/
@@ -267,6 +273,8 @@ strong {
   /* We define this height because we have to made this navigation-bar as sticky-bar, so In order for 
   making this sticky bar we have to give a fixed height. */
   height: 9.6rem;
+
+  position: relative;
 }
 
 .logo {
@@ -315,6 +323,24 @@ its low specificity, that's why! */
 .main-nav-link.nav-CTA:hover,
 .main-nav-link.nav-CTA:active {
   background-color: #e98b38;
+}
+
+/* BURGER-MOBILE NAVIGATION */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /**********************************************************************************/
