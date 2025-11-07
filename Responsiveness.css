@@ -99,7 +99,7 @@ don't overstress it. Ex: you have made 20 responsive query in a single file, whi
 }
 
 /**********************************************************************************/
-/* BELOW 770px (TABLET) */
+/* BELOW 770px (PORTRAIT TABLET) */
 /**********************************************************************************/
 
 /* 768/12 = 64em */
@@ -165,7 +165,7 @@ don't overstress it. Ex: you have made 20 responsive query in a single file, whi
 }
 
 /**********************************************************************************/
-/* BELOW 660px (MOBILE) */
+/* BELOW 660px (SMALL TABLET) */
 /**********************************************************************************/
 
 /* 660/12 = 55em */
@@ -246,6 +246,39 @@ don't overstress it. Ex: you have made 20 responsive query in a single file, whi
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 2.4rem;
+  }
+
+  /* For "Meal Cards" & "Feature Containers"  */
+  .grid--col-3,
+  .grid--col-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* We make Diet column into that column that occupies all sapce of grid from 1 to -1,
+  so, we can center the diet-list. */
+  .diet {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  /* Pricing */
+  .pricing-plan {
+    width: 100%;
+  }
+
+  /* Footer */
+  .grid--footer {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .nav-col {
+    grid-row: 1 / -1;
+  }
+
+  .address-col {
+    /* span 2: Occupies two column space. */
+    grid-column: span 2;
+    justify-self: center;
   }
 }
 
