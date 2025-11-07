@@ -282,6 +282,108 @@ don't overstress it. Ex: you have made 20 responsive query in a single file, whi
   }
 }
 
+/**********************************************************************************/
+/* BELOW 528px (Phones) */
+/**********************************************************************************/
+
+/* 528/12 = 44em */
+@media (max-width: 44em) {
+  .grid--col-2,
+  .grid--col-3,
+  .grid--col-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 3rem;
+  }
+
+  .hero {
+    padding: 0 2.2rem;
+  }
+
+  .delivered-imgs img {
+    width: 4.1rem;
+    height: 4.1rem;
+  }
+
+  .delivered-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .logos img {
+    height: 1.4rem;
+  }
+
+  /* Remember: nth child doesn't have any connection with class, it contains only connection
+  to its parent-element. Ex: In html document .step-img-box is the 2nd child element of its 
+  parent-element named as "<div class="container grid grid--center-vertically grid--col-2">" 
+  that's why we write "2" in the brackets.  */
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  /* We use "transform property" to reduce space between step-number to its child picture 
+  of mobile phone. */
+  .step-img-box {
+    transform: translateY(3.6rem);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-text {
+    line-height: 1.4;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 4.8rem 3.2rem 6.4rem 3.2rem;
+  }
+
+  .cta-image {
+    height: 32rem;
+    grid-row: 1;
+  }
+
+  .grid--footer {
+    column-gap: 4rem;
+  }
+}
+
+/**********************************************************************************/
+/* BELOW 528px (Phones) */
+/**********************************************************************************/
+
+/* 348/12 = 29em */
+@media (max-width: 29em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 /* FONT SIZE SYSTEM (px):
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
 
