@@ -60,6 +60,7 @@ html {
   font-size: 62.5%;
   /* Check out the Responsiveness file to understand this property. */
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* For choosing the best typography for your website according to its personality, its better to write 
@@ -275,6 +276,7 @@ strong {
   height: 9.6rem;
 
   position: relative;
+  transition: all 0.3s ease-in;
 }
 
 .logo {
@@ -331,6 +333,11 @@ its low specificity, that's why! */
   border: none;
   background: none;
   cursor: pointer;
+  display: none;
+  /* Note for z-index: We are having trouble of focus border color of orange, when we hit tab by keyboard 
+  but this border hides from background-color of #fff and rarely see it which likes a bug so, we make this
+  button as top every element on page so, it can show above background-color of #fff.  */
+  z-index: 9999;
 }
 
 .icon-mobile-nav {
@@ -341,6 +348,25 @@ its low specificity, that's why! */
 
 .icon-mobile-nav[name="close-outline"] {
   display: none;
+}
+
+/* STICKY NAVIGATION FOR DESKTOP */
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .hero-section {
+  margin-top: 9.6rem;
 }
 
 /**********************************************************************************/

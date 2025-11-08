@@ -16,7 +16,7 @@
   <body>
     <!-- SECTION HEADER -->
     <header class="header">
-      <a href="#">
+      <a href="#" id="home">
         <img
           class="logo"
           src="./Images/omnifood-logo.png"
@@ -25,11 +25,15 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">How It Works</a></li>
-          <li><a href="#" class="main-nav-link">Meals</a></li>
-          <li><a href="#" class="main-nav-link">Testimonials</a></li>
-          <li><a href="#" class="main-nav-link">Pricing</a></li>
-          <li><a href="#" class="main-nav-link nav-CTA">Try for free</a></li>
+          <li>
+            <a href="#how-it-works" class="main-nav-link">How It Works</a>
+          </li>
+          <li><a href="#meals" class="main-nav-link">Meals</a></li>
+          <li>
+            <a href="#testimonials" class="main-nav-link">Testimonials</a>
+          </li>
+          <li><a href="#pricing" class="main-nav-link">Pricing</a></li>
+          <li><a href="#CTA" class="main-nav-link nav-CTA">Try for free</a></li>
         </ul>
       </nav>
 
@@ -53,10 +57,12 @@
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a href="#" class="btn btn--primary btn--margin-right"
+            <a href="#pricing" class="btn btn--primary btn--margin-right"
               >Start Eating Well</a
             >
-            <a href="#" class="btn btn--secondary">Learn More &darr;</a>
+            <a href="#how-it-works" class="btn btn--secondary"
+              >Learn More &darr;</a
+            >
 
             <div class="delivered-meals">
               <div class="delivered-imgs">
@@ -117,7 +123,7 @@
       </section>
 
       <!-- SECTION HOW -->
-      <section class="section-how">
+      <section class="section-how" id="how-it-works">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -192,7 +198,7 @@
       </section>
 
       <!-- SECTION MEAL -->
-      <section class="section-meal">
+      <section class="section-meal" id="meals">
         <div class="container center-text">
           <span class="subheading">Meal</span>
           <h2 class="heading-secondary">
@@ -342,7 +348,7 @@
 
       <!-- SECTION TESTIMONIAL -->
       <!-- In testimonials most of the developers prefer "figure" element to represent Images and Blockquote -->
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it, you can't go back!</h2>
@@ -445,7 +451,7 @@
       </section>
 
       <!-- SECTION PRICING -->
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -583,7 +589,7 @@
       </section>
 
       <!-- SECTION CTA -->
-      <div class="section-cta">
+      <div class="section-cta" id="CTA">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -656,7 +662,7 @@
       <div class="container grid grid--footer">
         <!-- First Column -->
         <div class="logo-col">
-          <a href="#">
+          <a href="#home">
             <img
               class="footer-logo"
               src="./Images/omnifood-logo.png"
@@ -683,7 +689,8 @@
           </ul>
 
           <p class="copyright">
-            Copyright &copy; 2027 by Omnifood, Inc. All right reserved.
+            Copyright &copy; <span class="year">2027</span> by Omnifood, Inc.
+            All right reserved.
           </p>
         </div>
 
@@ -747,5 +754,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="Omni-Food.js"></script>
   </body>
 </html>
