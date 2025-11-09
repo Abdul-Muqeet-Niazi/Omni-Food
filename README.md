@@ -1,6 +1,7 @@
 ## Omnifood &mdash; Never cook again!
 
-> Omni-Food is an AI-powered food subscription platform that helps you eat healthy every day, tailored to your personal tastes and nutritional needs. Check out live here: 
+Omni-Food is an AI-powered food subscription platform that helps you eat healthy every day, tailored to your personal tastes and nutritional needs, Check out live here: https://abdul-muqeet-niazi.github.io/Omni-Food/.
+
 
 ---
 
