@@ -3,7 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omni Food</title>
+
+    <!-- ------------------------------------- -->
+    <!-- Always use this line for Optimization -->
+    <!-- Basically this "meta" tells us about the description/summary of our website -->
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+    <!-- ------------------------------------- -->
+    <!-- favicon: You have seen the icon on every page has its own icon above on small tab, this icon is called the favicon -->
+    <!-- Also use these Line of Favicon(ICON) for Web-icon of tab, IOS App Icon and Android App Icon -->
+    <!-- 1. Browser Tab: 16x16 -->
+    <!-- 2. Taskbar Shortcuts / Browser Bookmarks: 32x32 -->
+    <!-- 3. Desktops Shortcuts: 96x96 -->
+    <!-- 4. Apple touch icon for mobile devices: 180x180 -->
+    <!-- 5. Android touch icon for mobile devices: 512x512(Icon for Desktop Mobile Devices) / 192x192 (Icon for Android Chrome) -->
+    <!-- Remember: For Android App Icon, There is no link-tag, we have to make a manifest.wemanifest file in which we have to
+    write our code in JSON Format, for the Icon . -->
+    <!--For Browser Tab-->
+    <link rel="icon" href="./Images/favicon.png" />
+    <!--For Apple touch mobile-->
+    <link rel="apple-touch-icon" href="./Images/favicon-192.png" />
+    <!--For Android touch mobile devices-->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- ------------------------------------- -->
+
+    <title>Omnifood &mdash; Never cook again!</title>
     <link rel="stylesheet" href="Omni-Food.css" />
     <link rel="stylesheet" href="Responsiveness.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -93,11 +119,27 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="./Images/hero.png"
-              class="hero-img"
-              alt="Woman enjoying food, meals in a storage container, and food bowls on a table"
-            />
+            <!-- <picture>: The <picture> tag acts as a container. It does not load the image to be displayed,
+            but tells the browser which image from the <img> tag to load. The <picture> tag contains
+            the <img> tag. The <picture> tag does not make other tags like <source> and <img> obsolete. -->
+            <!-- so, It adapts the picture according to browser support like Internet-Explorer(IE) doesn't
+            support "webp" images. so it adapts "png" format Images. -->
+            <picture>
+              <!-- <source>: The <source> HTML element specifies one or more media resources for the <picture>, <audio>, 
+              and <video> elements. It is a void element, which means that it has no content and does not 
+              require a closing tag. This element is commonly used to offer the same media content in multiple
+              file formats in order to provide compatibility with a broad range of browsers given their differing
+              support for image file formats and media file formats. -->
+              <source srcset="./Images/hero-webp.webp" type="image/webp" />
+              <source srcset="./Images/hero-min.png" type="image/webp" />
+              <!-- Default is hero-webp.webp ↓ -->
+              <img
+                src="./Images/hero-webp.webp"
+                class="hero-img"
+                alt="Woman enjoying food, meals in a storage container, and food bowls on a table"
+                fetchpriority="high"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -602,7 +644,11 @@
                 first meal is on us!
               </p>
 
-              <form action="#" class="cta-form">
+              <!-- In order to recieve submission of forms then, You have to use "name" and "netlify" tag
+              as well as should be hosted on netlify platform as it never worked.
+              1. "name" attribute apply on all "input", "select" and "form" tags. 
+              2. "netlify" attribute only apply on "form" tag. -->
+              <form name="Sign-Up" class="cta-form">
                 <div>
                   <label for="User-Name">Full Name</label>
                   <input
@@ -618,6 +664,7 @@
                   <input
                     type="email"
                     id="User-Email"
+                    name="email"
                     placeholder="me@example.com"
                     required
                   />
@@ -625,7 +672,7 @@
 
                 <div>
                   <label for="select-where">Where did you hear from us?</label>
-                  <select id="select-where" required>
+                  <select id="select-where" name="select-where" required>
                     <option value="">Please choose the options</option>
                     <option value="Family/Friends">Family and Friends</option>
                     <option value="YouTube">YouTube</option>
@@ -672,17 +719,17 @@
 
           <ul class="social-links">
             <li>
-              <a href="#"
+              <a href="#" aria-label="Instagram"
                 ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
               ></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" aria-label="Facebook"
                 ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
               ></a>
             </li>
             <li>
-              <a href="#"
+              <a href="#" aria-label="Twitter"
                 ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
               ></a>
             </li>
@@ -754,6 +801,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
-    <script src="Omni-Food.js"></script>
+    <script defer src="Omni-Food.js"></script>
   </body>
 </html>
