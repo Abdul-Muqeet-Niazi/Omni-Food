@@ -1,16 +1,14 @@
 ## Omnifood &mdash; Never cook again!
 
-Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs.
+Omni-Food is an AI-powered food subscription platform that helps you eat healthy every day, tailored to your personal tastes and nutritional needs, Check out live here: https://abdul-muqeet-niazi.github.io/Omni-Food/.
+
 
 ---
 
 ### Table of Contents
 - [About](#about)  
 - [Features](#features)  
-- [Installation](#installation)  
 - [Usage](#usage)  
-- [Technologies](#technologies)  
-- [Contributing](#contributing)  
 - [License](#license)  
 
 ---
